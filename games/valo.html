@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topup Genshin Impact</title>
+    <title>Topup Valorant</title>
     <style>
         /* General Styles */
         * {
@@ -61,6 +61,7 @@
             border: none;
             border-radius: 6px;
             font-size: 16px;
+            background-color: #ddd;
         }
 
         .header select {
@@ -75,7 +76,7 @@
         }
 
         .actions button {
-            background-color: white;
+            background-color: #ddd;
             color: #007BFF;
             border: none;
             padding: 8px 16px;
@@ -114,7 +115,7 @@
         /* Item Styles */
         .items {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(4,1fr);
             gap: 15px;
         }
 
@@ -133,7 +134,6 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
         .item p {
             font-size: 16px;
             color: #333;
@@ -146,7 +146,6 @@
             color: #007BFF;
             text-align: right;
         }
-
         /* Form Pembayaran */
         .payment-form {
             display: none;
@@ -208,13 +207,8 @@
         <header class="header">
             <h1>Topup Game</h1>
             <div class="input-group">
-                <input type="text" id="game-id" placeholder="Masukkan ID Game">
-                <select id="server">
-                    <option value="Asia">Asia</option>
-                    <option value="America">America</option>
-                    <option value="Europe">Europe</option>
-                    <option value="TW/HK/MO">TW/HK/MO</option>
-                </select>
+                <input type="number" id="game-id" placeholder="Masukkan ID Game">
+                <input type="number" id="game-id" placeholder="Masukkan ID Server">
             </div>
             <div class="actions">
                 <button id="search-id">CARI ID</button>
@@ -223,34 +217,146 @@
 
         <!-- Content Section -->
         <main>
-            <h2 class="title">Genshin Impact</h2>
+            <h2 class="title">Valorant</h2>
             <div class="search-bar">
-                <input type="text" id="search" placeholder="Pencarian">
+                <input type="text" id="search" placeholder="CARI MENU PILIHANMU">
             </div>
             <div class="items">
                 <div class="item" data-id="1">
-                    <p>Genshin Impact 60 Genesis Crystals</p>
-                    <span>Rp 13.000</span>
+                    <p><strong>Chip</strong> 10 Diamond</p>
+                    <span>Rp 4.000</span>
                 </div>
                 <div class="item" data-id="2">
-                    <p>Genshin Impact 300+30 Genesis Crystals</p>
-                    <span>Rp 58.000</span>
+                    <p><strong>Chip</strong> 28 Diamond</p>
+                    <span>Rp 9.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p>Genshin Impact 980+110 Genesis Crystals</p>
-                    <span>Rp 174.000</span>
+                    <p><strong>Chip</strong> 44 Diamond</p>
+                    <span>Rp 13.000</span>
                 </div>
                 <div class="item" data-id="4">
-                    <p>Genshin Impact 1980+260 Genesis Crystals</p>
-                    <span>Rp 375.000</span>
+                    <p><strong>Chip</strong> 70 Diamond</p>
+                    <span>Rp 21.000</span>
                 </div>
                 <div class="item" data-id="5">
-                    <p>Genshin Impact 3280+600 Genesis Crystals</p>
-                    <span>Rp 577.000</span>
+                    <p><strong>Chip</strong> 86 Diamond</p>
+                    <span>Rp 25.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 112 Diamond</p>
+                    <span>Rp 32.000</span>
                 </div>
                 <div class="item" data-id="6">
-                    <p>Genshin Impact Blessing of the Welkin Moon</p>
-                    <span>Rp 60.000</span>
+                    <p><strong>Chip</strong> 140 Diamond</p>
+                    <span>Rp 39.000</span>
+                </div>
+                <div class="item" data-id="6">
+                    <p><strong>Chip</strong> 172 Diamond</p>
+                    <span>Rp 47.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 222 Diamond</p>
+                    <span>Rp 59.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 257 Diamond</p>
+                    <span>Rp 69.000</span>
+                </div>
+                <div class="item" data-id="7">
+                    <p><strong>Chip</strong> 284 Diamond</p>
+                    <span>Rp 77.000</span>
+                </div>
+                <div class="item" data-id="8">
+                    <p><strong>Chip</strong> 355 Diamond</p>
+                    <span>Rp 95.000</span>
+                </div>
+                <div class="item" data-id="9">
+                    <p><strong>Chip</strong> 370 Diamond</p>
+                    <span>Rp 98.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 408 Diamond</p>
+                    <span>Rp 107.000</span>
+                </div>
+                <div class="item" data-id="10">
+                    <p><strong>Chip</strong> 429 Diamond</p>
+                    <span>Rp 115.000</span>
+                </div>
+                <div class="item" data-id="11">
+                  <p><strong>Chip</strong> 514 Diamond</p>
+                    <span>Rp 135.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 600 Diamond</p>
+                    <span>Rp 155.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 706 Diamond</p>
+                    <span>Rp 183.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 878 Diamond</p>
+                    <span>Rp 225.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 963 Diamond</p>
+                    <span>Rp 245.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 930 Diamond</p>
+                    <span>Rp 110.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 1159 Diamond</p>
+                    <span>Rp 296.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 1412 Diamond</p>
+                    <span>Rp 360.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 1446 Diamond</p>
+                    <span>Rp 369.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 1830 Diamond</p>
+                    <span>Rp 473.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 2195 Diamond</p>
+                    <span>Rp529.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 2976 Diamond</p>
+                    <span>Rp 741.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 3073 Diamond</p>
+                    <span>Rp 763.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 4394 Diamond</p>
+                    <span>Rp 1.065.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>Chip</strong> 5532 Diamond</p>
+                    <span>Rp 1.420.000</span>
+                </div>
+                <div class="item" data-id="12">
+                    <p><strong>Chip</strong> Weekly Diamond Pass</p>
+                    <span>Rp 29.000</span>
+                </div>
+                <div class="item" data-id="12">
+                    <p><strong>Chip</strong> Weekly Diamond Pass2x</p>
+                    <span>Rp 57.000</span>
+                </div>
+                <div class="item" data-id="12">
+                    <p><strong>Chip</strong> Weekly Diamond Pass3x</p>
+                    <span>Rp 85.000</span>
+                </div>
+                <div class="item" data-id="12">
+                    <p><strong>Chip</strong> Twilight Member</p>
+                    <span>Rp 148.000</span>
                 </div>
             </div>
 
@@ -260,70 +366,14 @@
             <!-- Form Pembayaran -->
             <div class="payment-form" id="payment-form">
                 <h3>Form Pembayaran</h3>
-                <input type="text" id="card-name" placeholder="Nama pada Kartu" required>
-                <input type="number" id="card-number" placeholder="Nomor Kartu" required>
-                <input type="date" id="expiry-date" placeholder="Tanggal Kadaluarsa" required>
-                <input type="number" id="cvv" placeholder="CVV" required>
+                <input type="text" id="card-name" placeholder="Gausah diisi" required>
+                <input type="number" id="card-number" placeholder="Gausah diisi" required>
+                <input type="date" id="expiry-date" placeholder="Gausah diisi" required>
+                <input type="number" id="cvv" placeholder="Gausah diisi" required>
                 <a href="https://wa.me/6285890968612?text=(SILAHKAN%20ISI%20DENGAN%20BENAR)%0AJenis%20Game:%0AJumlah%20Diamond:%0AID%20Milik%20Anda:%0APembayaran%20Lewat:%20" class="btn" type="submit" id="submit-payment">Kirim Pembayaran</a>
             </div>
         </main>
     </div>
-    <script>
-        // Pencarian item
-        document.getElementById('search').addEventListener('input', function () {
-            const searchQuery = this.value.toLowerCase();
-            const items = document.querySelectorAll('.item');
-
-            items.forEach(item => {
-                const text = item.querySelector('p').textContent.toLowerCase();
-                if (text.includes(searchQuery)) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-
-        // Cari ID Game dan Server
-        document.getElementById('search-id').addEventListener('click', function () {
-            const gameId = document.getElementById('game-id').value.trim();
-            const server = document.getElementById('server').value;
-
-            if (!gameId) {
-                alert('Masukkan ID Game terlebih dahulu!');
-            } else {
-                console.log(`ID Game: ${gameId}, Server: ${server}`);
-                alert(`ID Game: ${gameId}\nServer: ${server}`);
-            }
-        });
-
-        // Menambahkan event listener ke setiap item untuk memilih item yang dibayar
-        let selectedItem = null;
-
-        document.querySelectorAll('.item').forEach(item => {
-            item.addEventListener('click', function () {
-                // Hapus highlight dari item yang sebelumnya dipilih
-                if (selectedItem) {
-                    selectedItem.style.border = "1px solid #ddd";
-                }
-
-                // Tandai item yang dipilih
-                selectedItem = item;
-                item.style.border = "2px solid #007BFF";
-
-                // Tampilkan tombol bayar
-                document.getElementById('pay-btn').style.display = 'block';
-            });
-        });
-
-        // Tombol bayar untuk membuka form pembayaran
-        document.getElementById('pay-btn').addEventListener('click', function () {
-            if (selectedItem) {
-                document.getElementById('payment-form').style.display = 'block';
-            } else {
-                alert("Pilih item terlebih dahulu.");
-            }
-        });
-    </script>
+    <script src="/games_logic/valo.js"></script>
 </body>
 </html>

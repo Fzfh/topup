@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topup Mobile Legend</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+    <title>Topup Free Fire</title>
     <style>
         /* General Styles */
         * {
@@ -57,7 +56,7 @@
         .header input,
         .header select {
             flex: 1;
-            max-width: 250px;
+            max-width: 550px;
             padding: 10px;
             border: none;
             border-radius: 6px;
@@ -135,6 +134,21 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+        .item2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            border: 1px solid #ff6600;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .item2:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
         .item p {
             font-size: 16px;
             color: #333;
@@ -147,6 +161,19 @@
             color: #007BFF;
             text-align: right;
         }
+        .item2 p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .item2 span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff6600;
+            text-align: right;
+        }
+
         /* Form Pembayaran */
         .payment-form {
             display: none;
@@ -186,6 +213,7 @@
             margin-top: 10px;
             font-weight: bold;
         }
+        
         /* Responsive Styles */
         @media (max-width: 768px) {
             .header .input-group {
@@ -208,9 +236,7 @@
         <header class="header">
             <h1>Topup Game</h1>
             <div class="input-group">
-                <input type="number" id="uid" placeholder="Masukkan ID Game">
-                <input type="number" id="server" placeholder="Masukkan ID Server">
-
+                <input type="text" id="game-id" placeholder="Masukkan ID Game">
             </div>
             <div class="actions">
                 <button id="search-id">CARI ID</button>
@@ -219,146 +245,146 @@
 
         <!-- Content Section -->
         <main>
-            <h2 class="title">MOBILE LEGEND</h2>
+            <h2 class="title">FREE FIRE</h2>
             <div class="search-bar">
                 <input type="text" id="search" placeholder="CARI MENU PILIHANMU">
             </div>
             <div class="items">
                 <div class="item" data-id="1">
-                    <p><strong>ML</strong> 10 Diamond</p>
-                    <span>Rp 4.000</span>
+                    <p><strong>FF</strong> 10 Diamond</p>
+                    <span>Rp 3.000</span>
                 </div>
                 <div class="item" data-id="2">
-                    <p><strong>ML</strong> 28 Diamond</p>
-                    <span>Rp 9.000</span>
+                    <p><strong>FF</strong> 25 Diamond</p>
+                    <span>Rp 5.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 44 Diamond</p>
-                    <span>Rp 13.000</span>
+                    <p><strong>FF</strong> 30 Diamond</p>
+                    <span>Rp 6.000</span>
                 </div>
                 <div class="item" data-id="4">
-                    <p><strong>ML</strong> 70 Diamond</p>
-                    <span>Rp 21.000</span>
+                    <p><strong>FF</strong> 50 Diamond</p>
+                    <span>Rp 8.000</span>
                 </div>
                 <div class="item" data-id="5">
-                    <p><strong>ML</strong> 86 Diamond</p>
-                    <span>Rp 25.000</span>
+                    <p><strong>FF</strong> 70 Diamond</p>
+                    <span>Rp 10.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 112 Diamond</p>
-                    <span>Rp 32.000</span>
+                    <p><strong>FF</strong> 100 Diamond</p>
+                    <span>Rp 14.000</span>
                 </div>
                 <div class="item" data-id="6">
-                    <p><strong>ML</strong> 140 Diamond</p>
-                    <span>Rp 39.000</span>
+                    <p><strong>FF</strong> 120 Diamond</p>
+                    <span>Rp 16.000</span>
                 </div>
                 <div class="item" data-id="6">
-                    <p><strong>ML</strong> 172 Diamond</p>
-                    <span>Rp 47.000</span>
+                    <p><strong>FF</strong> 140 Diamond</p>
+                    <span>Rp 19.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 222 Diamond</p>
-                    <span>Rp 59.000</span>
+                    <p><strong>FF</strong> 160 Diamond</p>
+                    <span>Rp 21.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 257 Diamond</p>
-                    <span>Rp 69.000</span>
+                    <p><strong>FF</strong> 180 Diamond</p>
+                    <span>Rp 24.000</span>
                 </div>
                 <div class="item" data-id="7">
-                    <p><strong>ML</strong> 284 Diamond</p>
-                    <span>Rp 77.000</span>
+                    <p><strong>FF</strong> 210 Diamond</p>
+                    <span>Rp 27.000</span>
                 </div>
                 <div class="item" data-id="8">
-                    <p><strong>ML</strong> 355 Diamond</p>
-                    <span>Rp 95.000</span>
+                    <p><strong>FF</strong> 280 Diamond</p>
+                    <span>Rp 35.000</span>
                 </div>
                 <div class="item" data-id="9">
-                    <p><strong>ML</strong> 370 Diamond</p>
-                    <span>Rp 98.000</span>
+                    <p><strong>FF</strong> 355 Diamond</p>
+                    <span>Rp 44.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 408 Diamond</p>
-                    <span>Rp 107.000</span>
+                    <p><strong>FF</strong> 375 Diamond</p>
+                    <span>Rp 47.000</span>
                 </div>
                 <div class="item" data-id="10">
-                    <p><strong>ML</strong> 429 Diamond</p>
-                    <span>Rp 115.000</span>
+                    <p><strong>FF</strong> 425 Diamond</p>
+                    <span>Rp 52.000</span>
                 </div>
                 <div class="item" data-id="11">
-                  <p><strong>ML</strong> 514 Diamond</p>
-                    <span>Rp 135.000</span>
+                  <p><strong>FF</strong> 545 Diamond</p>
+                    <span>Rp 66.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 600 Diamond</p>
-                    <span>Rp 155.000</span>
+                    <p><strong>FF</strong> 600 Diamond</p>
+                    <span>Rp 74.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 706 Diamond</p>
-                    <span>Rp 183.000</span>
+                    <p><strong>FF</strong> 645 Diamond</p>
+                    <span>Rp 78.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 878 Diamond</p>
-                    <span>Rp 225.000</span>
+                    <p><strong>FF</strong> 720 Diamond</p>
+                    <span>Rp 85.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 963 Diamond</p>
-                    <span>Rp 245.000</span>
+                    <p><strong>FF</strong> 800 Diamond</p>
+                    <span>Rp 95.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 930 Diamond</p>
+                    <p><strong>FF</strong> 930 Diamond</p>
                     <span>Rp 110.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 1159 Diamond</p>
-                    <span>Rp 296.000</span>
+                    <p><strong>FF</strong> 1050 Diamond</p>
+                    <span>Rp 125.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 1412 Diamond</p>
-                    <span>Rp 360.000</span>
+                    <p><strong>FF</strong> 1215 Diamond</p>
+                    <span>Rp 145.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 1446 Diamond</p>
-                    <span>Rp 369.000</span>
+                    <p><strong>FF</strong> 1440 Diamond</p>
+                    <span>Rp 169.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 1830 Diamond</p>
-                    <span>Rp 473.000</span>
+                    <p><strong>FF</strong> 1580 Diamond</p>
+                    <span>Rp 187.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 2195 Diamond</p>
-                    <span>Rp529.000</span>
+                    <p><strong>FF</strong> 1975 Diamond</p>
+                    <span>Rp 235.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 2976 Diamond</p>
-                    <span>Rp 741.000</span>
+                    <p><strong>FF</strong> 2180 Diamond</p>
+                    <span>Rp 253.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 3073 Diamond</p>
-                    <span>Rp 763.000</span>
+                    <p><strong>FF</strong> 2355 Diamond</p>
+                    <span>Rp 278.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 4394 Diamond</p>
-                    <span>Rp 1.065.000</span>
+                    <p><strong>FF</strong> 5600 Diamond</p>
+                    <span>Rp 685.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>ML</strong> 5532 Diamond</p>
-                    <span>Rp 1.420.000</span>
+                    <p><strong>FF</strong> 7290 Diamond</p>
+                    <span>Rp 833.000</span>
                 </div>
                 <div class="item" data-id="12">
-                    <p><strong>ML</strong> Weekly Diamond Pass</p>
-                    <span>Rp 29.000</span>
+                    <p><strong>FF</strong> Member Mingguan</p>
+                    <span>Rp 27.000</span>
                 </div>
                 <div class="item" data-id="12">
-                    <p><strong>ML</strong> Weekly Diamond Pass2x</p>
-                    <span>Rp 57.000</span>
+                    <p><strong>FF</strong> Member Mingguan + 20DM</p>
+                    <span>Rp 32.000</span>
                 </div>
                 <div class="item" data-id="12">
-                    <p><strong>ML</strong> Weekly Diamond Pass3x</p>
+                    <p><strong>FF</strong> Member Bulanan</p>
+                    <span>Rp 77.000</span>
+                </div>
+                <div class="item" data-id="12">
+                    <p><strong>FF</strong> Member Bulanan + 20DM</p>
                     <span>Rp 85.000</span>
-                </div>
-                <div class="item" data-id="12">
-                    <p><strong>ML</strong> Twilight Member</p>
-                    <span>Rp 148.000</span>
                 </div>
             </div>
 
@@ -376,6 +402,62 @@
             </div>
         </main>
     </div>
-    <script src="Mobile-Legend.js"></script>
+    <script src="/games_logic/free-fire.js">
+        // Pencarian item
+        document.getElementById('search').addEventListener('input', function () {
+            const searchQuery = this.value.toLowerCase();
+            const items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                const text = item.querySelector('p').textContent.toLowerCase();
+                if (text.includes(searchQuery)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+          });
+
+        // Cari ID Game dan Server
+        document.getElementById('search-id').addEventListener('click', function () {
+            const gameId = document.getElementById('game-id').value.trim();
+            const server = document.getElementById('server').value;
+
+            if (!gameId) {
+                alert('Masukkan ID Game terlebih dahulu!');
+            } else {
+                console.log(`ID Game: ${gameId}, Server: ${server}`);
+                alert(`ID Game: ${gameId}\nServer: ${server}`);
+            }
+        });
+
+        // Menambahkan event listener ke setiap item untuk memilih item yang dibayar
+        let selectedItem = null;
+
+        document.querySelectorAll('.item').forEach(item => {
+            item.addEventListener('click', function () {
+                // Hapus highlight dari item yang sebelumnya dipilih
+                if (selectedItem) {
+                    selectedItem.style.border = "1px solid #ff6600";
+                }
+
+                // Tandai item yang dipilih
+                selectedItem = item;
+                item.style.border = "2px solid #007BFF";
+
+                // Tampilkan tombol bayar
+                document.getElementById('pay-btn').style.display = 'block';
+            });
+        });
+
+        // Tombol bayar untuk membuka form pembayaran
+        document.getElementById('pay-btn').addEventListener('click', function () {
+            if (selectedItem) {
+                document.getElementById('payment-form').style.display = 'block';
+            } else {
+                alert("Pilih item terlebih dahulu.");
+            }
+        });
+    </script>
 </body>
 </html>

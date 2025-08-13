@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topup Free Fire</title>
+    <title>Topup Genshin Impact</title>
     <style>
         /* General Styles */
         * {
@@ -56,12 +56,11 @@
         .header input,
         .header select {
             flex: 1;
-            max-width: 550px;
+            max-width: 250px;
             padding: 10px;
             border: none;
             border-radius: 6px;
             font-size: 16px;
-            background-color: #ddd;
         }
 
         .header select {
@@ -76,7 +75,7 @@
         }
 
         .actions button {
-            background-color: #ddd;
+            background-color: white;
             color: #007BFF;
             border: none;
             padding: 8px 16px;
@@ -115,7 +114,7 @@
         /* Item Styles */
         .items {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(3,1fr);
             gap: 15px;
         }
 
@@ -134,21 +133,7 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        .item2 {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background-color: #f9f9f9;
-            border: 1px solid #ff6600;
-            border-radius: 8px;
-            padding: 15px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
 
-        .item2:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
         .item p {
             font-size: 16px;
             color: #333;
@@ -159,18 +144,6 @@
             font-size: 18px;
             font-weight: bold;
             color: #007BFF;
-            text-align: right;
-        }
-        .item2 p {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .item2 span {
-            font-size: 18px;
-            font-weight: bold;
-            color: #ff6600;
             text-align: right;
         }
 
@@ -213,7 +186,6 @@
             margin-top: 10px;
             font-weight: bold;
         }
-        
         /* Responsive Styles */
         @media (max-width: 768px) {
             .header .input-group {
@@ -237,6 +209,12 @@
             <h1>Topup Game</h1>
             <div class="input-group">
                 <input type="text" id="game-id" placeholder="Masukkan ID Game">
+                <select id="server">
+                    <option value="Asia">Asia</option>
+                    <option value="America">America</option>
+                    <option value="Europe">Europe</option>
+                    <option value="TW/HK/MO">TW/HK/MO</option>
+                </select>
             </div>
             <div class="actions">
                 <button id="search-id">CARI ID</button>
@@ -245,146 +223,34 @@
 
         <!-- Content Section -->
         <main>
-            <h2 class="title">FREE FIRE</h2>
+            <h2 class="title">Genshin Impact</h2>
             <div class="search-bar">
-                <input type="text" id="search" placeholder="CARI MENU PILIHANMU">
+                <input type="text" id="search" placeholder="Pencarian">
             </div>
             <div class="items">
                 <div class="item" data-id="1">
-                    <p><strong>FF</strong> 10 Diamond</p>
-                    <span>Rp 3.000</span>
+                    <p>Genshin Impact 60 Genesis Crystals</p>
+                    <span>Rp 13.000</span>
                 </div>
                 <div class="item" data-id="2">
-                    <p><strong>FF</strong> 25 Diamond</p>
-                    <span>Rp 5.000</span>
+                    <p>Genshin Impact 300+30 Genesis Crystals</p>
+                    <span>Rp 58.000</span>
                 </div>
                 <div class="item" data-id="3">
-                    <p><strong>FF</strong> 30 Diamond</p>
-                    <span>Rp 6.000</span>
+                    <p>Genshin Impact 980+110 Genesis Crystals</p>
+                    <span>Rp 174.000</span>
                 </div>
                 <div class="item" data-id="4">
-                    <p><strong>FF</strong> 50 Diamond</p>
-                    <span>Rp 8.000</span>
+                    <p>Genshin Impact 1980+260 Genesis Crystals</p>
+                    <span>Rp 375.000</span>
                 </div>
                 <div class="item" data-id="5">
-                    <p><strong>FF</strong> 70 Diamond</p>
-                    <span>Rp 10.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 100 Diamond</p>
-                    <span>Rp 14.000</span>
+                    <p>Genshin Impact 3280+600 Genesis Crystals</p>
+                    <span>Rp 577.000</span>
                 </div>
                 <div class="item" data-id="6">
-                    <p><strong>FF</strong> 120 Diamond</p>
-                    <span>Rp 16.000</span>
-                </div>
-                <div class="item" data-id="6">
-                    <p><strong>FF</strong> 140 Diamond</p>
-                    <span>Rp 19.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 160 Diamond</p>
-                    <span>Rp 21.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 180 Diamond</p>
-                    <span>Rp 24.000</span>
-                </div>
-                <div class="item" data-id="7">
-                    <p><strong>FF</strong> 210 Diamond</p>
-                    <span>Rp 27.000</span>
-                </div>
-                <div class="item" data-id="8">
-                    <p><strong>FF</strong> 280 Diamond</p>
-                    <span>Rp 35.000</span>
-                </div>
-                <div class="item" data-id="9">
-                    <p><strong>FF</strong> 355 Diamond</p>
-                    <span>Rp 44.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 375 Diamond</p>
-                    <span>Rp 47.000</span>
-                </div>
-                <div class="item" data-id="10">
-                    <p><strong>FF</strong> 425 Diamond</p>
-                    <span>Rp 52.000</span>
-                </div>
-                <div class="item" data-id="11">
-                  <p><strong>FF</strong> 545 Diamond</p>
-                    <span>Rp 66.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 600 Diamond</p>
-                    <span>Rp 74.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 645 Diamond</p>
-                    <span>Rp 78.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 720 Diamond</p>
-                    <span>Rp 85.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 800 Diamond</p>
-                    <span>Rp 95.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 930 Diamond</p>
-                    <span>Rp 110.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 1050 Diamond</p>
-                    <span>Rp 125.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 1215 Diamond</p>
-                    <span>Rp 145.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 1440 Diamond</p>
-                    <span>Rp 169.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 1580 Diamond</p>
-                    <span>Rp 187.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 1975 Diamond</p>
-                    <span>Rp 235.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 2180 Diamond</p>
-                    <span>Rp 253.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 2355 Diamond</p>
-                    <span>Rp 278.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 5600 Diamond</p>
-                    <span>Rp 685.000</span>
-                </div>
-                <div class="item" data-id="3">
-                    <p><strong>FF</strong> 7290 Diamond</p>
-                    <span>Rp 833.000</span>
-                </div>
-                <div class="item" data-id="12">
-                    <p><strong>FF</strong> Member Mingguan</p>
-                    <span>Rp 27.000</span>
-                </div>
-                <div class="item" data-id="12">
-                    <p><strong>FF</strong> Member Mingguan + 20DM</p>
-                    <span>Rp 32.000</span>
-                </div>
-                <div class="item" data-id="12">
-                    <p><strong>FF</strong> Member Bulanan</p>
-                    <span>Rp 77.000</span>
-                </div>
-                <div class="item" data-id="12">
-                    <p><strong>FF</strong> Member Bulanan + 20DM</p>
-                    <span>Rp 85.000</span>
+                    <p>Genshin Impact Blessing of the Welkin Moon</p>
+                    <span>Rp 60.000</span>
                 </div>
             </div>
 
@@ -394,15 +260,15 @@
             <!-- Form Pembayaran -->
             <div class="payment-form" id="payment-form">
                 <h3>Form Pembayaran</h3>
-                <input type="text" id="card-name" placeholder="Gausah diisi" required>
-                <input type="number" id="card-number" placeholder="Gausah diisi" required>
-                <input type="date" id="expiry-date" placeholder="Gausah diisi" required>
-                <input type="number" id="cvv" placeholder="Gausah diisi" required>
+                <input type="text" id="card-name" placeholder="Nama pada Kartu" required>
+                <input type="number" id="card-number" placeholder="Nomor Kartu" required>
+                <input type="date" id="expiry-date" placeholder="Tanggal Kadaluarsa" required>
+                <input type="number" id="cvv" placeholder="CVV" required>
                 <a href="https://wa.me/6285890968612?text=(SILAHKAN%20ISI%20DENGAN%20BENAR)%0AJenis%20Game:%0AJumlah%20Diamond:%0AID%20Milik%20Anda:%0APembayaran%20Lewat:%20" class="btn" type="submit" id="submit-payment">Kirim Pembayaran</a>
             </div>
         </main>
     </div>
-    <script>
+    <script src="/games_logic/gi.js">
         // Pencarian item
         document.getElementById('search').addEventListener('input', function () {
             const searchQuery = this.value.toLowerCase();
@@ -416,7 +282,7 @@
                     item.style.display = 'none';
                 }
             });
-          });
+        });
 
         // Cari ID Game dan Server
         document.getElementById('search-id').addEventListener('click', function () {
@@ -438,7 +304,7 @@
             item.addEventListener('click', function () {
                 // Hapus highlight dari item yang sebelumnya dipilih
                 if (selectedItem) {
-                    selectedItem.style.border = "1px solid #ff6600";
+                    selectedItem.style.border = "1px solid #ddd";
                 }
 
                 // Tandai item yang dipilih

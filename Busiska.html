@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+  
+  body, ul, li, a {
+  margin: 0;
+  padding: 0;
+ /* list-style: none;
+/* text-decoration: none; */
+}
+  
+    nav{
+      display: flex;
+      justify-content: space-between;
+      background: #333;
+      color: white;
+      align-items: center;
+      padding: 10px 20px;
+      font-size: 30px;
+    }
+    .nav img{
+      width: 10%;
+    }
+    .nav:hover{
+      color: brown;
+    }
+    .nav-li li{
+      display: inline;
+      margin-right: 5px;
+    }
+    .bus-section{
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #800000;
+    }
+    .header h2 {
+  font-size: 24px;
+  color: #800000;
+}
+.header .viewall{
+  font-size: 14px;
+  text-decoration: none;
+  color: #800000;
+}
+.cards{
+  display: flex;
+  justify-content: space-between;
+}
+.card{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  transition: transform 0.2s;
+}
+.card img{
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #f0f0f0;
+}
+.card:hover{
+  transform: scale(1.05);
+}
+.detail{
+  padding: 15px;
+}
+.detail h3{
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+.detail .p{
+  margin: 5px 0;
+  font-size: 16px;
+  color: #800000;
+  font-weight: bold;
+}
+.detail .c{
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  gap: 20px;
+}
+.conten-img img{
+  width: 100%;
+  border-radius: 5px;
+}
+.conten{
+  margin: 10px;
+}
+.link{
+  background-color: #fbcb3a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  color: #444;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+   /* min-width: 250px;*/
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+.cons{
+  height: fill-available 0;
+}
+.back {
+  max-width: 1200px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width:600px){
+  nav{
+    font-size: 15px;
+  }
+  .card{
+    width: 30%;
+  }
+  .flex-box{
+  font-size: 10px;
+  margin: 30px;
+  gap: 20px;
+}
+  h2{
+    font-size: 15pt;
+  }
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.footer-section p {
+    font-size: 10px;
+    line-height: 1.6;
+}
+  .footer-section ul li a{
+    font-size: 13px;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+  <nav class="nav">
+    <img src="Y.jpg" alt="">
+    <ul class="nav-li">
+      <li>Main</li>
+      <li>Profile</li>
+      <li>Menu</li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+    <section>
+    <div class="bus-section">
+      <div class="header">
+        <h2> BUS TELOLET</h2>
+        <a href="" class="viewall">VIEW ALL</a>
+      <hr>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="bocchi.jpg" alt="">
+          <div class="detail">
+            <h3>FufuFafa</h3>
+            <p class="p">Icikiwir asolole</p>
+            <p class="c">ambatron angga Kokop</p>
+          </div>
+        </div>
+      <div class="card">
+          <img src="bocchi.jpg" alt="">
+        <div class="detail">
+            <h3>Fafafufu</h3>
+            <p class="p">Vario 65 FreeHatin</p>
+            <p class="c">Pascol Maen Miya Ngamuk</p>
+            </div>
+      </div>
+        <div class="card">
+                <img src="bocchi.jpg" alt="">
+          <div class="detail">
+                  <h3>Bkent</h3>
+                  <p class="p">Bkent Argus Global</p>
+                  <p class="c">Bkent Fanny no buff</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <article class="bus-section">
+      <div class="flex-box">
+          <img src="a.jpg" width="30%"alt="Progammer Gen Z">
+        <div class="conten">
+      <h4>
+        TENTANG WEBSITE
+      </h4>
+      <p>
+        Web Topup Saya Ini Adalah Yang Termurah daripada di tempat lain nya, dan kualitas dari website saya terjamin bagus dan aman 100% untuk pengguna yang ingin membeli diamond atau apapun.
+      </p>
+      <a class="link"href="">lihat disini...</a>
+      </div>
+      </div>
+      
+      <div class="flex-box">
+       <div class="conten">
+         <h4>Tentang Diri</h4>
+        <p>Saya adalah anak ke 3 dari 3 bersaudara dan tinggal di depok jawa barat. Cita cita saya adalah menjadi programmer IT yang handal dan pro.  Usia saya 17 dan menduduki kelas 11 jurusan pplg (perakayasa perangkat lunak dan game) </p>
+         <a class="link"href="">lihat disini...</a>
+        </div>
+          <img src="a.jpg" width="30%"alt="Progammer Gen Z">
+      </div>
+     </div>
+     </div>
+    </article>
+    <article class="back">
+    <h2>KEMBALI KE HOME</h2>
+      <a class="link"href="topup.html">Kembali</a>
+  </article>
+    <div>
+      <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: fazrihafidz120@gmail.com</p>
+                <p>Phone: +6285890968612</p>
+                <p>Address: Jl laskar indah 2</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright By ZriiXD.</p>
+       </div>
+    </footer>
+  </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,314 @@
+:root{
+--blue : #2C2546;
+--dark-blue : #181535;
+--green : #00E809;
+--white : #fff
+}
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+list-style-type: none;
+box-sizing: border-box;
+font-family: 'Tahoma';
+}
+body {
+background-color: var(--dark-blue);
+color: var(--white);
+}
+header{
+background-color: var(--blue);
+text-align: center;
+position: fixed;
+width: 100% ;
+font-weight: bold;
+padding: 2%;
+top: 0;
+}
+.title {
+color: var(--green);
+border-bottom: 1px solid var(--white);
+}
+
+.input-search {
+width: 40%;
+border: none;
+border-radius: 0 0 0 10px;
+padding: 2px;
+}
+
+.input-submit {
+margin-left: 5px;
+border: none;
+border-radius: 0 20px 0 0;
+padding: 2px;
+background-color: var(--green);
+color: var(--blue);
+width: 10%;
+font-weight: bold;
+}
+
+nav {
+margin-top: 20px;
+}
+
+nav ul {
+display: flex;
+gap: 20px;
+justify-content: center;
+}
+
+nav ul li a {
+color: var(--green);
+}
+
+nav ul li a:hover {
+border-bottom: 3px solid var(--white);
+}
+.slider
+{
+margin-top: 10%;
+display: block;
+margin-left: auto !important;
+margin-right: auto !important;
+width: 50%;
+align-items: center;
+}
+
+.slider h4
+{
+margin-top: 20%;
+}
+
+.slides {
+display: flex;
+width: 100%;
+overflow: hidden;
+transition: margin 0.5s
+}
+
+
+.slides img 
+{
+width: 100%;
+border-radius: 15px 15px 15px 15px;
+}
+
+.slide {
+width: 100%;
+flex: 0 0 100%;
+transition: .5s;
+}
+.choose_1:checked ~ .slides > .s1 {
+margin-left: 0;
+}
+
+.choose_2:checked ~ .slides > .s1 {
+margin-left: -100%;
+}
+.choose_3:checked ~ .slides > .s1 {
+margin-left: -200%;
+}
+.navigasi {
+margin-top: 20px;
+}
+.prev, .next {
+cursor: pointer;
+padding: 10px;
+background-color: #00E809;
+color: black;
+border-radius: 5px;
+margin: 0 20px;
+}
+
+.indikator {
+position: absolute;
+bottom: 60px;
+left: 0;
+width: 100%;
+text-align: center;
+}
+
+.indikator span {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #fff;
+margin: 0 5px;
+}
+
+.overlay 
+{
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0, 0, 0, 0.7);
+transition: opacity 500ms;
+visibility: hidden;
+opacity: 0;
+}
+
+.overlay:target 
+{
+visibility: visible;
+opacity: 1;
+}
+
+.popup 
+{
+margin: 70px auto;
+padding: 20px;
+background: var(--dark-blue);
+border-radius: 5px;
+width: 80%;
+position: relative;
+transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+margin-top: 0;
+color: var(--white);
+font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+position: absolute;
+top: 20px;
+right: 30px;
+transition: all 200ms;
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+color: #333;
+}
+
+.popup .close:hover 
+{
+color: #06D85F;
+}
+
+.content 
+{
+max-height: 30%;
+width: 50%;
+}
+.title-p{
+padding-top: 2rem;
+margin-left: 60px;
+margin-bottom: 50px;
+}
+.populer{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+}
+.populer img{
+border-radius: 30px;
+width: 80%;
+}
+.harga {
+color: var(--green);
+}
+.link a{
+color: var(--white);
+}
+.link a:hover{
+color: var(--green);
+}
+.judul-produk{
+margin-bottom: 20px;
+font-size: 15pt;
+}
+.pesan {
+background-color: var(--green);
+padding: 5%;
+border-radius: 10px;
+}
+.pesan:hover{
+background-color: var(--white);
+padding: 5%;
+border-radius: 10px;
+}
+.pesan img{
+width: 30px;
+}
+.tentang{
+display: grid;
+justify-content: center;
+margin-top: 10%;
+font-size: 15pt;
+margin-left: 30px;
+width: 90%;
+}
+.card{
+background-color: var(--blue);
+padding: 5%;
+border-radius: 10px;
+box-shadow: 20px 20px black;
+}
+.card h1{
+ text-align: center;
+}
+html{
+scroll-behavior: smooth;
+}
+footer{
+display: grid;
+justify-content: center;
+background-color: var(--blue);
+margin-top: 10%;
+padding: 5%;
+font-size: 10px;
+}
+.sosmed img {
+ width: 40px;
+}
+.sosmed-tengah{
+margin-bottom: 20px;
+}
+#copyright{
+text-align: center;
+padding: 15px;
+font-size: 16px;
+}
+
+@media screen and (max-width:600px){
+  nav ul li a{
+    font-size: 11pt;
+  }
+  .slider {
+      display: none ;
+        }
+  .title-p{
+    padding-top: 6rem;
+    margin-left: 20px;
+  }
+  .populer{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      font-size: 10pt;
+  }
+  .judul-produk{
+    font-size: 10pt;
+  }
+  .link img{
+    width: 90%;
+  }
+  .tentang{
+    width: 90%;
+    margin-left: 10px;
+    font-size: 13pt;
+  }
+  .sosmed{
+    font-size: 10pt;
+    padding-left: 2rem;
+  }
+  .sosmed img{
+    width: 10%;
+    margin-top: 25px;
+  }
+}

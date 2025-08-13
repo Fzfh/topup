@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topup PUBG Mobile</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url(https://i.imgur.com/pqwpGVx.jpeg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            animation: anim 2.5s linear infinite;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #2C2546;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .header .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .header input,
+        .header select {
+            flex: 1;
+            max-width: 250px;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: #ddd;
+        }
+
+        .header select {
+            appearance: none;
+            background-color: white;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .actions button {
+            background-color: #ddd;
+            color: #007BFF;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .actions button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        /* Item Styles */
+        .items {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            border: 1px solid #007BFF;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .item p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .item span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+            text-align: right;
+        }
+        /* Form Pembayaran */
+        .payment-form {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .payment-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn{
+            display: inline-block;
+            background-color: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header .input-group {
+                flex: 1;
+            }
+
+            .header input,
+            .header select {
+                max-width: 100%;
+            }
+            .items{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Topup Game</h1>
+            <div class="input-group">
+                <input type="number" id="game-id" placeholder="Masukkan ID Game">
+            </div>
+            <div class="actions">
+                <button id="search-id">CARI ID</button>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <main>
+            <h2 class="title">PUBG Mobile</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="CARI MENU PILIHANMU">
+            </div>
+            <div class="items">
+                <div class="item" data-id="1">
+                    <p><strong>PUBG</strong> 25 UC</p>
+                    <span>Rp 8.000</span>
+                </div>
+                <div class="item" data-id="2">
+                    <p><strong>PUBG</strong> 50 UC </p>
+                    <span>Rp 15.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 70 UC</p>
+                    <span>Rp 20.000</span>
+                </div>
+                <div class="item" data-id="4">
+                    <p><strong>PUBG</strong> 100 UC</p>
+                    <span>Rp 27.000</span>
+                </div>
+                <div class="item" data-id="5">
+                    <p><strong>PUBG</strong> 150 UC</p>
+                    <span>Rp 33.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 200 UC</p>
+                    <span>Rp 45.000</span>
+                </div>
+                <div class="item" data-id="6">
+                    <p><strong>PUBG</strong> 250 UC</p>
+                    <span>Rp 58.000</span>
+                </div>
+                <div class="item" data-id="6">
+                    <p><strong>PUBG</strong> 300 UC</p>
+                    <span>Rp 65.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 350 UC</p>
+                    <span>Rp 73.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 375 UC</p>
+                    <span>Rp 81.000</span>
+                </div>
+                <div class="item" data-id="7">
+                    <p><strong>PUBG</strong> 500 UC</p>
+                    <span>Rp 105.000</span>
+                </div>
+                <div class="item" data-id="8">
+                    <p><strong>PUBG</strong> 525 UC</p>
+                    <span>Rp 110.000</span>
+                </div>
+                <div class="item" data-id="9">
+                    <p><strong>PUBG</strong> 700 UC</p>
+                    <span>Rp 140.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 750 UC</p>
+                    <span>Rp 153.000</span>
+                </div>
+                <div class="item" data-id="10">
+                    <p><strong>PUBG</strong> 1000 UC</p>
+                    <span>Rp 205.000</span>
+                </div>
+                <div class="item" data-id="11">
+                  <p><strong>PUBG</strong> 1100 UC</p>
+                    <span>Rp 220.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 1250 UC</p>
+                    <span>Rp 245.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 1500 UC</p>
+                    <span>Rp 186.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 1750 UC</p>
+                    <span>Rp 320.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> 2500 UC</p>
+                    <span>Rp 475.000</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p><strong>PUBG</strong> Elite pass plus + Kupon peti klasik</p>
+                    <span>Rp 360.000</span>
+                </div>
+            </div>
+
+            <!-- Tombol Bayar di akhir -->
+            <button id="pay-btn" style="display:none; width: 100%; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 6px; margin-top: 20px;">Bayar</button>
+
+            <!-- Form Pembayaran -->
+            <div class="payment-form" id="payment-form">
+                <h3>Form Pembayaran</h3>
+                <input type="text" id="card-name" placeholder="Gausah diisi" required>
+                <input type="number" id="card-number" placeholder="Gausah diisi" required>
+                <input type="date" id="expiry-date" placeholder="Gausah diisi" required>
+                <input type="number" id="cvv" placeholder="Gausah diisi" required>
+                <a href="https://wa.me/6285890968612?text=(SILAHKAN%20ISI%20DENGAN%20BENAR)%0AJenis%20Game:%0AJumlah%20Diamond:%0AID%20Milik%20Anda:%0APembayaran%20Lewat:%20" class="btn" type="submit" id="submit-payment">Kirim Pembayaran</a>
+            </div>
+        </main>
+    </div>
+    <script src="pubg.js"></script>
+</body>
+</html>

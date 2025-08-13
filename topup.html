@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://imgur.com/serlvgi.jpeg">
+  <link rel="stylesheet" href="topup.css">
+  <title>ZriiStore</title>
+</head>
+<body>
+  <header>
+    <a class="title" href="/">ZriiStore</a>
+  <input type="search" id="cari" class="input-search" placeholder="Cari Menu, Huruf Kecil Semua">
+  <button onclick="searchGame()" id="searchButton" class="input-submit">CARI</button>
+  <div id="suggestions"></div>
+  <!-- ... -->
+  <nav>
+    <ul>
+      <li><a href="#">BERANDA</a></li>
+      <li><a href="#pilihan">PRODUK</a></li>
+      <li><a href="portfolio.html">PORTFOLIO</a></li>
+      <li><a href="Busiska.html">KONTAK</a></li>
+    </ul>
+  </nav>
+</header>
+  
+<div id="home" class="slider">
+
+        <h4>Klik Untuk Slide Gambar</h4>
+
+        <input type="radio" name="choose" id="choose_1" class="choose_1">
+        <input type="radio" name="choose" id="choose_2" class="choose_2">
+        <input type="radio" name="choose" id="choose_3" class="choose_3">
+        <div class="slides">
+            <a href="" target="_blank" rel="noopener noreferrer" class="slide s1">
+               <img src="https://i.imgur.com/NietZQp.jpeg" alt="" >
+            </a>
+            <a href="https://wa.me/6285890968612" target="_blank" rel="noopener noreferrer" class="slide">
+              <img src="https://i.imgur.com/eKRvAMe.jpeg" alt="" >
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer" class="slide">
+               <img src="https://i.imgur.com/QhecqeO.jpeg" alt="" >
+            </a>
+        </div>
+         <div class="navigasi">
+    <span class="prev"><strong>BACK</strong></span>
+    <span class="next"><strong>NEXT</strong></span>
+  </div>
+  <div class="indikator">
+    <span class="aktif"></span>
+    <span></span>
+  </div>
+</div>
+
+<h1 class="title-p">POPULER GAMES</h1>
+<section id="populer" class="populer">
+   <div class="ff">
+
+        <div class="link">
+
+            <a href="free-fire.html">
+                    <img src="https://i.imgur.com/WBa2Y6c.png" alt="">
+                    <div class="judul-produk">Free Fire</div>
+            </a>
+        </div>
+    </div>
+   <div class="mlbb">
+        <div class="link">
+            <a href="Mobile-Legend.html">
+                    <img src="https://i.imgur.com/gCVo8lz.jpeg" alt="">
+                    <div class="judul-produk">Mobile Legend</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-mlbb">
+            <div class="popup">
+                <h2>HARGA Mobile Legends</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="hdi">
+
+        <div class="link">
+
+            <a href="domino-menu.html">
+                    <img src="https://i.imgur.com/xCr4Ojc.jpeg" alt="">
+                    <div class="judul-produk">High Domino</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-hdi">
+            <div class="popup">
+                <h2>HARGA HIGH DOMINO</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="valo">
+
+        <div class="link">
+
+            <a href="valo.html">
+                    <img src="https://i.imgur.com/FDeCnQR.jpeg" alt="">
+                    <div class="judul-produk">Valorant</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-valo">
+            <div class="popup">
+                <h2>HARGA VALORANT</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="pubgm">
+
+        <div class="link">
+
+            <a href="pubg.html">
+                    <img src="https://i.imgur.com/7nBrghc.jpeg" alt="">
+                    <div class="judul-produk">PUBGM</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-pubgm">
+            <div class="popup">
+                <h2>HARGA PUBGM</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="gi">
+
+        <div class="link">
+
+            <a href="Genshin.html">
+                    <img src="https://i.imgur.com/YRXAKct.jpeg" alt="">
+                    <div class="judul-produk">Genshin Impact</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-genshin">
+            <div class="popup">
+                <h2>HARGA GENSHIN IMPACT</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+  <div class="hok">
+
+        <div class="link">
+
+            <a href="hok.html">
+                    <img src="https://i.imgur.com/UJVMBan.jpeg" alt="">
+                    <div class="judul-produk">Honor Of Kings</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-hok">
+            <div class="popup">
+                <h2>HARGA FREE FIRE</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+  <div class="hsr">
+
+        <div class="link">
+
+            <a href="hsr.html">
+                    <img src="https://i.imgur.com/ztVnrtF.jpeg" alt="">
+                    <div class="judul-produk">Honkai Star Rail</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-coc">
+            <div class="popup">
+                <h2>HARGA FREE FIRE</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<h1 class="title-p">APLIKASI</h1>
+<section id="populer" class="populer">
+   <div class="Spotify">
+
+        <div class="link">
+
+            <a href="#harga-spotify">
+                    <img src="https://i.imgur.com/UV6XzLD.jpeg" alt="">
+                    <div class="judul-produk">Spotify</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-spotify">
+            <div class="popup">
+                <h2>HARGA FREE FIRE</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="resso">
+
+        <div class="link">
+
+            <a href="#harga-resso">
+                    <img src="https://i.imgur.com/CP9wrLJ.jpeg" alt="">
+                    <div class="judul-produk">Resso</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-resso">
+            <div class="popup">
+                <h2>HARGA Mobile Legends</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="vidio">
+
+        <div class="link">
+
+            <a href="#harga-vidio">
+                    <img src="https://i.imgur.com/xtlmnaQ.jpeg" alt="">
+                    <div class="judul-produk">Vidio</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-vidio">
+            <div class="popup">
+                <h2>HARGA HIGH DOMINO</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="iqidyi">
+
+        <div class="link">
+
+            <a href="#harga-iqiyi">
+                    <img src="https://i.imgur.com/0fEiBLS.jpeg" alt="">
+                    <div class="judul-produk">Iqiyi</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-iqiyi">
+            <div class="popup">
+                <h2>HARGA VALORANT</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="poinku">
+
+        <div class="link">
+
+            <a href="#harga-poinku">
+                    <img src="https://i.imgur.com/si0DPap.jpeg" alt="">
+                    <div class="judul-produk">Poinku</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-poinku">
+            <div class="popup">
+                <h2>HARGA PUBGM</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+   <div class="myp">
+
+        <div class="link">
+
+            <a href="#harga-myp">
+                    <img src="https://i.imgur.com/6K10BjB.jpeg" alt="">
+                    <div class="judul-produk">MyPertamina</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-genshin">
+            <div class="popup">
+                <h2>HARGA GENSHIN IMPACT</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<h1 class="title-p">E-WALLET</h1>
+<section id="populer" class="populer">
+   <div class="gopay">
+
+        <div class="link">
+
+            <a href="#harga-gopay">
+                    <img src="https://i.imgur.com/ya1iMF4.jpeg" alt="">
+                    <div class="judul-produk">Gopay</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-gopay">
+            <div class="popup">
+                <h2>HARGA FREE FIRE</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 10.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 40.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 100.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6285890968612" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="dana">
+
+        <div class="link">
+
+            <a href="#harga-dana">
+                    <img src="https://i.imgur.com/zeGS6Yg.jpg" alt="">
+                    <div class="judul-produk">Dana</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-dana">
+            <div class="popup">
+                <h2>HARGA Mobile Legends</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 10.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 40.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 100.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6285890968612" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="ovo">
+
+        <div class="link">
+
+            <a href="#harga-ovo">
+                    <img src="https://i.imgur.com/to4P5f1.jpeg" alt="">
+                    <div class="judul-produk">Ovo</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-ovo">
+            <div class="popup">
+                <h2>HARGA HIGH DOMINO</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 10.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 40.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 100.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6285890968612" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="sp">
+
+        <div class="link">
+
+            <a href="#harga-sp">
+                    <img src="https://i.imgur.com/NlF702l.jpeg" alt="">
+                    <div class="judul-produk">ShopeePay</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-sp">
+            <div class="popup">
+                <h2>HARGA VALORANT</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 10.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 40.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 100.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6285890968612" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="bca">
+
+        <div class="link">
+
+            <a href="#harga-bca">
+                    <img src="https://i.imgur.com/lnBIffK.jpeg" alt="">
+                    <div class="judul-produk">BCA Mobile</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-bca">
+            <div class="popup">
+                <h2>HARGA PUBGM</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 10.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 40.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 100.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6285890968612" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="bni">
+
+        <div class="link">
+
+            <a href="#harga-bni">
+                    <img src="https://i.imgur.com/SypwShb.jpeg" alt="">
+                    <div class="judul-produk">BNI Mobile</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-bni">
+            <div class="popup">
+                <h2>HARGA GENSHIN IMPACT</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 10.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 40.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 100.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6285890968612" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<h1 class="title-p" id="pilihan">PILIHAN MENU</h1>
+<section  class="populer">
+    <div class="games">
+        <div class="link">
+            <a href="">
+                <img src="https://th.bing.com/th/id/OIP.Am8DvHKs-QiuZ_D2fJgkcgHaHa?rs=1&pid=ImgDetMain" alt="">
+                <div class="judul-produk">GAMES</div>
+            </a>
+        </div>
+    </div>
+    <div class="games">
+        <div class="link">
+            
+        </div>
+    </div>
+</section>
+<section class="tentang" id="tentang">
+          <div class="card">
+           <h1>TENTANG KAMI</h1>
+              <br>
+           <p>
+            <a href="" class="title">ZRIISTORE</a> adalah website yang menyediakan layanan digital <br>seperti layanan streaming premium, voucher game, dan lain-lain.<br>Kami berdiri sejak tahun 2021 dan telah dipercaya oleh berbagai konsumen.
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="sosmed">
+
+            <h1 style="text-align: center;" class="sosmed-tengah">SOSIAL MEDIA</h1>
+            <a href="https://instagram.com/fiz.zriixd" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/UzLmZ2m.pnghttps://i.imgur.com/WBa2Y6c.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/4rVjlOD.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/sqyPFGm.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/kwdeMw5.png" alt=""></a>
+        </div>
+    </footer>
+    <div id="copyright">
+        &copy;2024 ZRIISTORE
+    </div>
+<script src="topup.js"></script>
+</body>
+</html>

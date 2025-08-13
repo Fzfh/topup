@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Up Honor Of Kings</title>
+  <style>
+    
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2C2546;
+  /* background: linear-gradient(
+    to right,
+    rgba(200, 107, 142, 1),
+    rgba(218, 105, 250, 1),
+    rgba(110, 125, 253, 1)
+  );*/
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /*max-width: 500px;*/
+  width: 93%;
+  margin: 10px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  display: block;
+  border-radius: 0 0 15px 15px;
+}
+
+.form-container {
+  padding: 20px;
+}
+
+.input-field {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 30px;
+}
+.info-text {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown option {
+  font-size: 14px;
+}
+
+.select {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  margin: 10px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.kategori-options {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin: 0;
+  font-size: 30px;
+}
+
+.kategori-btn {
+  display: grid;
+  width: 90%;
+  margin: 2%;
+  padding: 20px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/*.kategori-btn:hover {
+  background-color: #ff5d5d;
+  color: #fff;
+  border-color: #ff5d5d;
+}*/
+
+.kategori-btn.selected {
+  border: 2px solid #ff5d5d;
+  color: #fff;
+  background-color: #ff5d5d;
+}
+/*.kategori-btn.selected {
+  background-color: #fff;
+  color: black;
+  border: 1px solid #ddd;
+}*/
+/*.kategori-btn.selected:hover{
+  background-color: #ff5d5d;
+  color: #fff;
+  border-color: #ff5d5d;
+}*/
+
+.denom-options {
+  margin-top: 10px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.denom-item {
+  display: inline-block;
+  width: 90%;
+  margin: 2%;
+  padding: 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/*.denom-item:hover {
+  background-color: #ff5d5d;
+  color: #fff;
+  border-color: #ff5d5d;
+}*/
+
+.denom-item.selected {
+  border: 2px solid #ff5d5d;
+  background-color: #ffebee;
+}
+/*.denom-item.selected {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}*/
+/*.denom-item.selected:hover{
+  background-color: #ff5d5d;
+  color: #fff;
+  border-color: #ff5d5d;
+}*/
+
+.denom-item p {
+  margin: 5px 0;
+  font-size: 30px;
+}
+.denom-item img{
+  width: 20%;
+}
+.kontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+    button {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3;
+}
+
+button:active,
+button:hover{
+    outline: 0;
+}
+
+button span{
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+button:hover span {
+    background: none;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+@media (max-width:600px){
+  .container{
+    width: 90%;
+  }
+  .select{
+    width: 80%;
+  }
+    .header-image{
+    margin-bottom: 10px;
+  }
+  .denom-options{
+    grid-template-columns: repeat(2,1fr)
+  }
+  .denom-item img{
+    width: 50%;
+  }
+  .input-field{
+    width: 70%;
+    font-size: 10px;
+  }
+  .info-text{
+    font-size: 10px;
+  }
+  h2, h3{
+    font-size: 15px;
+  }
+  .kategori-options{
+    font-size: 15px;
+    margin: 5%;
+  }
+  .kategori-btn{
+    width: 75%;
+    padding: 10px 15px;
+  }
+  .denom-item{
+    width: 85%;
+    padding: 10px 15px;
+  }
+  .denom-item p{
+    font-size: 15px;
+  }
+  .btn-bayar{
+    font-size: 15px;
+  }
+}
+
+@media (max-width:1200px){
+  .input-field2{
+    width: 40%;
+  }
+  h2, h3{
+    font-size: 15px;
+  }
+  .info-text{
+    font-size: 10px;
+  }
+  .kategori-btn{
+    padding: 10px 10px
+  }
+  .denom-item{
+    padding: 5px 5px;
+  }
+  .denom-item p{
+    font-size: 15px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+      <img src="https://i.imgur.com/v2DecB3.jpeg" alt="Header Image" class="header-image">
+    </div>
+  <div class="container">
+    <div class="form-container">
+      <h2>Masukkan Nomor Pengguna</h2>
+      <input type="number" placeholder="Masukkan Nomor" class="input-field">
+      <p class="info-text">
+        Untuk mengetahui ID Genshin Impact Anda, bisa dilihat di bagian profil Genshin Impact. Silahkan memasukkan ID untuk melanjutkan transaksi. <br>
+        Contoh: <strong>123432568</strong>, Jika ID benar maka nickname akan muncul di bawah form input ID.
+      </p>
+    </div>
+  </div>
+  <div class="select">
+    <h2>Pilih Nominal Pulsa</h2>
+
+    <div class="kategori">
+      <h3>Pilih Kategori</h3>
+      <div class="kategori-options">
+        <div class="kategori-btn selected" onclick="selectKategori(this)" id="diamond">Pulsa</div>
+        <div class="kategori-btn" onclick="selectKategori(this)" id="membership">Pulsa Transfer</div>
+      </div>
+    </div>
+
+    <div class="denom">
+      <h3>Pilih Nominal</h3>
+      <div class="denom-options" id="nominalContainer">
+        <div class="denom-item selected" onclick="selectDenom(this)">
+          <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>70 Diamond</p>
+          <p>Rp 10.000</p>
+        </div>
+        <div class="denom-item" onclick="selectDenom(this)">
+          <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>140 Diamond</p>
+          <p>Rp 20.000</p>
+        </div>
+        <div class="denom-item"onclick="selectDenom(this)">
+          <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>210 Diamond</p>
+          <p>Rp 30.000</p>
+        </div>
+        <div class="denom-item"onclick="selectDenom(this)">
+          <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+         <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+         <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+         <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+         <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+           <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+         <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+         <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+          <div class="denom-item"onclick="selectDenom(this)">
+           <img src="https://i.imgur.com/yYgUcas.png" alt="">
+          <p>280 Diamond</p>
+          <p>Rp 40.000</p>
+        </div>
+      </div>
+    </div>
+    <div class="kontainer">
+      <button>
+        <span class="text">Button</span>
+      </button>
+     </div>
+  </div>
+    </div>
+  </div>
+  
+   <script>
+    function selectKategori(button) {
+  const allButtons = document.querySelectorAll('.kategori-btn');
+  allButtons.forEach(btn => btn.classList.remove('selected'));
+  button.classList.add('selected');
+}
+
+function selectDenom(item) {
+  const allItems = document.querySelectorAll('.denom-item');
+  allItems.forEach(denom => denom.classList.remove('selected'));
+  item.classList.add('selected');
+}
+
+/* MENU DAIMEN NYA INI BANG*/
+const diamondMenu = document.getElementById('diamond');
+        const membershipMenu = document.getElementById('membership');
+        const nominalContainer = document.getElementById('nominalContainer');
+        
+        const diamondNominals = '<div class="denom-item selected" onclick="selectDenom(this)">            <img src="https://i.imgur.com/yYgUcas.png" alt="">                                                    <p>70 Diamond</p>                                        <p>Rp 10.000</p>                               </div>                                           <div class="denom-item" onclick="selectDenom(this)">                                               <img src="https://i.imgur.com/yYgUcas.png" alt="">               <p>140 Diamond</p>                                <p>Rp 20.000</p>                                 </div>                                           <div class="denom-item"onclick="selectDenom(this)">                            <img src="https://i.imgur.com/yYgUcas.png" alt="">                                                    <p>210 Diamond</p>                                <p>Rp 30.000</p>                                </div>                                          <div class="denom-item"onclick="selectDenom(this)">                                                  <img src="https://i.imgur.com/yYgUcas.png" alt="">                                                    <p>280 Diamond</p><p>Rp 40.000</p></div><div class="denom-item"onclick="selectDenom(this)"><img src="https://i.imgur.com/yYgUcas.png" alt=""><p>280 Diamond</p><p>Rp 40.000</p></div><div class="denom-item"onclick="selectDenom(this)"><img src="https://i.imgur.com/yYgUcas.png" alt=""><p>280 Diamond</p><p>Rp 40.000</p></div><div class="denom-item"onclick="selectDenom(this)"><img src="https://i.imgur.com/yYgUcas.png" alt=""><p>280 Diamond</p> <p>Rp 40.000</p></div><div class="denom-item"onclick="selectDenom(this)"><img src="https://i.imgur.com/yYgUcas.png" alt=""><p>280 Diamond</p> <p>Rp 40.000</p></div><div class="denom-item"onclick="selectDenom(this)"><img src="https://i.imgur.com/yYgUcas.png" alt=""><p>280 Diamond</p><p>Rp 40.000</p></div><div class="denom-item"onclick="selectDenom(this)"><img src="https://i.imgur.com/yYgUcas.png" alt=""><p>280 Diamond</p> <p>Rp 40.000</p>  </div>  <div class="denom-item"onclick="selectDenom(this)"> <img src="https://i.imgur.com/yYgUcas.png" alt=""> <p>280 Diamond</p><p>Rp 40.000</p></div> <div class="denom-item"onclick="selectDenom(this)"><img src="https://i.imgur.com/yYgUcas.png" alt=""> <p>280 Diamond</p>  <p>Rp 40.000</p>  </div>';
+        
+        const membershipNominals = '<div class="denom-item selected" onclick="selectDenom(this)">          <img src="https://i.imgur.com/serlvgi.jpeg" alt="">                                                    <p>member 1 minggu</p>                                 <p>Rp 10.000</p>                                </div>                                           <div class="denom-item" onclick="selectDenom(this)">                                               <img src="https://i.imgur.com/serlvgi.jpeg" alt="">                                                    <p>member 1 bulan</p>                                 <p>Rp 20.000</p>                                 </div>                                           <div class="denom-item"onclick="selectDenom(this)">                                                  <img src="https://i.imgur.com/serlvgi.jpeg" alt="">                                                    <p>member 1 minggu + 50dm</p>                                 <p>Rp 30.000</p>                                </div>                                          <div class="denom-item"onclick="selectDenom(this)">                                                  <img src="https://i.imgur.com/serlvgi.jpeg" alt="">                                                    <p>1 minggu + 100dm</p>                                 <p>Rp 50.000</p>                                </div>';
+        
+        function updateNominalList(menuType) {
+            if (menuType === 'diamond') {
+                nominalContainer.innerHTML = diamondNominals;
+                diamondMenu.classList.add('selected');
+                membershipMenu.classList.remove('selected');
+            } else if (menuType === 'membership') {
+                nominalContainer.innerHTML = membershipNominals;
+                membershipMenu.classList.add('selected');
+                diamondMenu.classList.remove('selected');
+            }
+        }
+
+        // Event listeners
+        diamondMenu.addEventListener('click', () => updateNominalList('diamond'));
+        membershipMenu.addEventListener('click', () => updateNominalList('membership'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topup Game</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .header .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .header input,
+        .header select {
+            flex: 1;
+            max-width: 250px;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .header select {
+            appearance: none;
+            background-color: white;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .actions button {
+            background-color: white;
+            color: #007BFF;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .actions button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        /* Item Styles */
+        .items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .item p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .item span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+            text-align: right;
+        }
+
+        /* Form Pembayaran */
+        .payment-form {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .payment-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn{
+  display: inline-block;
+  background-color: #6c63ff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header .input-group {
+                flex-direction: column;
+            }
+
+            .header input,
+            .header select {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Topup Game</h1>
+            <div class="input-group">
+                <input type="text" id="game-id" placeholder="Masukkan ID Game">
+                <select id="server">
+                    <option value="Asia">Asia</option>
+                    <option value="America">America</option>
+                    <option value="Europe">Europe</option>
+                    <option value="TW/HK/MO">TW/HK/MO</option>
+                </select>
+            </div>
+            <div class="actions">
+                <button id="search-id">CARI ID</button>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <main>
+            <h2 class="title">Genshin Impact</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Pencarian">
+            </div>
+            <div class="items">
+                <div class="item" data-id="1">
+                    <p>Genshin Impact 60 Genesis Crystals</p>
+                    <span>Rp 11.403</span>
+                </div>
+                <div class="item" data-id="2">
+                    <p>Genshin Impact 300+30 Genesis Crystals</p>
+                    <span>Rp 57.285</span>
+                </div>
+                <div class="item" data-id="3">
+                    <p>Genshin Impact Blessing of the Welkin Moon</p>
+                    <span>Rp 57.385</span>
+                </div>
+                <div class="item" data-id="4">
+                    <p>Genshin Impact 980+110 Genesis Crystals</p>
+                    <span>Rp 171.566</span>
+                </div>
+                <div class="item" data-id="5">
+                    <p>Genshin Impact 1980+260 Genesis Crystals</p>
+                    <span>Rp 371.910</span>
+                </div>
+                <div class="item" data-id="6">
+                    <p>Genshin Impact 3280+600 Genesis Crystals</p>
+                    <span>Rp 574.220</span>
+                </div>
+            </div>
+
+            <!-- Tombol Bayar di akhir -->
+            <button id="pay-btn" style="display:none; width: 100%; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 6px; margin-top: 20px;">Bayar</button>
+
+            <!-- Form Pembayaran -->
+            <div class="payment-form" id="payment-form">
+                <h3>Form Pembayaran</h3>
+                <input type="text" id="card-name" placeholder="Nama pada Kartu" required>
+                <input type="number" id="card-number" placeholder="Nomor Kartu" required>
+                <input type="date" id="expiry-date" placeholder="Tanggal Kadaluarsa" required>
+                <input type="number" id="cvv" placeholder="CVV" required>
+                <a href="https://wa.me/6285890968612?text=(SILAHKAN%20ISI%20DENGAN%20BENAR)%0AJenis%20Game:%0AJumlah%20Diamond:%0AID%20Milik%20Anda:%0APembayaran%20Lewat:%20"type="submit" id="submit-payment">Kirim Pembayaran</a>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Pencarian item
+        document.getElementById('search').addEventListener('input', function () {
+            const searchQuery = this.value.toLowerCase();
+            const items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                const text = item.querySelector('p').textContent.toLowerCase();
+                if (text.includes(searchQuery)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Cari ID Game dan Server
+        document.getElementById('search-id').addEventListener('click', function () {
+            const gameId = document.getElementById('game-id').value.trim();
+            const server = document.getElementById('server').value;
+
+            if (!gameId) {
+                alert('Masukkan ID Game terlebih dahulu!');
+            } else {
+                console.log(ID Game: ${gameId}, Server: ${server});
+                alert(ID Game: ${gameId}\nServer: ${server});
+            }
+        });
+
+        // Menambahkan event listener ke setiap item untuk memilih item yang dibayar
+        let selectedItem = null;
+
+        document.querySelectorAll('.item').forEach(item => {
+            item.addEventListener('click', function () {
+                // Hapus highlight dari item yang sebelumnya dipilih
+                if (selectedItem) {
+                    selectedItem.style.border = "1px solid #ddd";
+                }
+
+                // Tandai item yang dipilih
+                selectedItem = item;
+                item.style.border = "2px solid #007BFF";
+
+                // Tampilkan tombol bayar
+                document.getElementById('pay-btn').style.display = 'block';
+            });
+        });
+
+        // Tombol bayar untuk membuka form pembayaran
+        document.getElementById('pay-btn').addEventListener('click', function () {
+            if (selectedItem) {
+                document.getElementById('payment-form').style.display = 'block';
+            } else {
+                alert("Pilih item terlebih dahulu.");
+            }
+        });
+    </script>
+</body>
+</html>
